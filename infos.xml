@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+	<title><![CDATA[Ajax rating]]></title>
+	<author><![CDATA[Cyril MAGUIRE (http://www.ecyseo.net)]]></author>
+	<version>0.2</version>
+	<date>04/10/2013</date>
+	<site>http://www.ecyseo.net</site>
+	<description><![CDATA[Plugin permettant d'afficher sur une page, un ou plusieurs systèmes de vote par étoiles]]></description>
+	<requirements></requirements>
+</document>
