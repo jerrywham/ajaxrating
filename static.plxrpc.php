@@ -36,7 +36,7 @@ if (isset($_REQUEST['a'])) {
 	$artId = '';
 }
 # Chargement du fichier de données
-if ($plxMotor->version == '5.1.6') {
+if ((isset($plxMotor->version) && $plxMotor->version == '5.1.6') || (null !== PLX_VERSION && PLX_VERSION == '5.1.6')) {
 	$filename = PLX_ROOT.'data/configuration/plugins/ajaxrating/'.$id_sent.'.'.$f.'.xml';
 } else {
 	$filename = PLX_ROOT.PLX_CONFIG_PATH.'plugins/ajaxrating/'.$id_sent.'.'.$f.'.xml';
