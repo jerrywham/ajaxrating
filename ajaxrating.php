@@ -80,7 +80,9 @@ class ajaxrating extends plxPlugin {
     public function plxShowConstruct() {
 
     	if (!is_file($this->staticvide)) {
-    		plxUtils::write('<?php $plxShow->staticContent(); ?>', PLX_ROOT.$this->getParam('staticvide'));
+    		$plxMotor = plxMotor::getInstance();
+    		$this->staticvide = $plxMotor->aConf['racine_themes'].$plxMotor->style.'/static-vide.php';
+    		file_put_contents(PLX_ROOT.$this->staticvide, '<?php $plxShow->staticContent(); ?>');
     	}
 
 		# infos sur la page statique
