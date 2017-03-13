@@ -46,7 +46,7 @@ class ajaxrating extends plxPlugin {
 		$plxMotor = plxMotor::getInstance();
 
     	# Si le dossier de vote n'existe pas, on le crée
-    	if ($plxMotor->version == '5.1.6') {
+    	if ((isset($plxMotor->version) && $plxMotor->version == '5.1.6') || (null !== PLX_VERSION && PLX_VERSION == '5.1.6')) ){
     		if (!is_dir(PLX_ROOT.'data/configuration/plugins')) {
 	    		mkdir(PLX_ROOT.'data/configuration/plugins');
 	    		chmod(PLX_ROOT.'data/configuration/plugins', 0777);
@@ -216,7 +216,7 @@ class ajaxrating extends plxPlugin {
 	  	$static = (isset($params[3]) ? $params['3'] : $this->static);
 
 	  	# Chargement du fichier de données
-	  	if ($plxMotor->version == '5.1.6') {
+	  	if ((isset($plxMotor->version) && $plxMotor->version == '5.1.6') || (null !== PLX_VERSION && PLX_VERSION == '5.1.6')) {
 	  		$filename = PLX_ROOT.'data/configuration/plugins/ajaxrating/'.$id.'.'.$plxMotor->plxGlob_arts->aFiles[$artId];
 	  	} else {
 	  		$filename = PLX_ROOT.PLX_CONFIG_PATH.'plugins/ajaxrating/'.$id.'.'.$plxMotor->plxGlob_arts->aFiles[$artId];
