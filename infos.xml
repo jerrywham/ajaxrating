@@ -5,6 +5,7 @@
 	<version>1.1</version>
 	<date>13/03/2017</date>
 	<site>http://www.ecyseo.net</site>
+        <compatible>5.6</compatible>
 	<description><![CDATA[Plugin permettant d'afficher sur une page, un ou plusieurs systèmes de vote par étoiles]]></description>
 	<requirements></requirements>
 </document>
